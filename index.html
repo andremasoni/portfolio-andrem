@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>André Masoni Fraile | Backend Java</title>
+
+<meta name="description" content="Construo APIs REST em Java 21 e Spring Boot 3 e automatizo rotinas fiscais e administrativas na Clariens. Projetos, decisões técnicas e trajetória.">
+<meta name="author" content="André Masoni Fraile">
+<meta name="theme-color" content="#F1F3F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1114" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://sqlandr3.github.io/portfolio-andrem/">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="André Masoni Fraile | Backend Java">
+<meta property="og:description" content="APIs REST em Java 21 e Spring Boot 3, e automação de rotinas fiscais na Clariens. Projetos, decisões técnicas e trajetória.">
+<meta property="og:url" content="https://sqlandr3.github.io/portfolio-andrem/">
+<meta property="og:image" content="https://sqlandr3.github.io/portfolio-andrem/andremasoni.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script>
+  // Applied before first paint to avoid a flash of the wrong theme.
+  (function () {
+    var root = document.documentElement;
+
+    // Content is visible by default. This class hands control of the reveal
+    // animation to main.js, so a blocked or failed script leaves a readable page.
+    root.classList.add("js");
+
+    var stored = null;
+    try { stored = localStorage.getItem("theme"); } catch (e) {}
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.setAttribute("data-theme", stored || (prefersDark ? "dark" : "light"));
+  })();
+</script>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#topo">andré masoni <span>/ backend java</span></a>
+
+    <nav class="topnav" aria-label="Seções">
+      <a href="#construido">Construído</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#stack">Stack</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <section class="hero wrap">
+    <p class="eyebrow reveal">São Paulo, Brasil</p>
+    <h1 class="reveal">Eu construo o que <mark>resolve o problema</mark> que eu mesmo enfrento.</h1>
+    <p class="lede reveal">Trabalho com a rotina fiscal e administrativa de TI na Clariens: lançamento e conferência de notas, contratos, orçamento. Toda vez que uma dessas tarefas se repetia, eu parava e transformava ela em um fluxo automatizado.</p>
+    <p class="lede reveal">Foi assim que cheguei em backend. Hoje construo APIs REST em Java 21 e Spring Boot 3 pelo mesmo motivo: são sistemas que executam uma regra melhor do que uma pessoa executaria na mão, toda vez, sem cansar.</p>
+
+    <div class="actions reveal">
+      <a class="btn btn-solid" href="https://github.com/sqlandr3" target="_blank" rel="noopener">Ver o código</a>
+      <a class="btn btn-ghost" href="#construido">Começar pela história</a>
+    </div>
+
+    <dl class="facts reveal">
+      <div><dt>Constrói</dt><dd>APIs REST e automações de processo</dd></div>
+      <div><dt>Stack</dt><dd>Java, Spring Boot, SQL</dd></div>
+      <div><dt>Formação</dt><dd>ADS na UNINTER, 2026 a 2028</dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="construido">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Clariens · desde outubro de 2025</p>
+        <h2>Construído no trabalho</h2>
+        <p>Rotinas que eu executava na mão e passei a resolver com fluxo automatizado, dentro das ferramentas que a empresa já usa.</p>
+      </div>
+
+      <div class="work">
+        <article class="work-item reveal">
+          <h3>Consulta de fornecedor e contrato</h3>
+          <dl class="ba">
+            <div><dt>Antes</dt><dd>Procurar fornecedor, contrato e condição em planilhas e pastas espalhadas, uma consulta por vez.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Fluxo que responde a consulta direto, sem abrir a planilha.</dd></div>
+          </dl>
+          <p class="tool">Copilot Studio</p>
+        </article>
+
+        <article class="work-item reveal">
+          <h3>Conferência de nota fiscal</h3>
+          <dl class="ba">
+            <div><dt>Antes</dt><dd>Conferir fornecedor, valores, datas de emissão e vencimento e condição de pagamento manualmente. A divergência só aparecia depois do lançamento.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Validação antes de a nota entrar no sistema, o que evita o retrabalho de corrigir depois.</dd></div>
+          </dl>
+          <p class="tool">Agente de validação · Fluig</p>
+        </article>
+
+        <article class="work-item reveal">
+          <h3>Controle orçamentário 2026</h3>
+          <dl class="ba">
+            <div><dt>Antes</dt><dd>Contratos, notas, rateio e orçamento em controles separados, sem visão única.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Base unificada com Opex, Capex, rateio por centro de custo e notas ligadas ao contrato de origem.</dd></div>
+          </dl>
+          <p class="tool">Planilha estruturada · dados do Protheus</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projetos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Código aberto no GitHub</p>
+        <h2>Construído em código</h2>
+        <p>Cada repositório existe para resolver ou aprender uma coisa específica. O código está aberto para conferência.</p>
+      </div>
+
+      <div class="projects">
+
+        <article class="card reveal">
+          <div class="card-top">
+            <h3>Order Management API</h3>
+            <span class="status">Concluído</span>
+          </div>
+          <p>API REST de gestão de pedidos: cadastro de produtos e clientes, criação de pedido com múltiplos itens e cálculo de totais.</p>
+          <div class="decision">
+            <span class="eyebrow">Decisão técnica</span>
+            <p>Autenticação stateless com JWT e refresh token, para o access token expirar rápido sem obrigar o usuário a fazer login de novo a cada expiração.</p>
+          </div>
+          <ul class="chips">
+            <li>Java 21</li><li>Spring Boot 3</li><li>JPA / Hibernate</li><li>MySQL</li><li>JWT</li>
+          </ul>
+          <a class="repo" href="https://github.com/sqlandr3/order-management-api" target="_blank" rel="noopener">github.com/sqlandr3/order-management-api</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top">
+            <h3>Spring Auth API</h3>
+            <span class="status">Concluído</span>
+          </div>
+          <p>Serviço de autenticação e autorização isolado, construído para aprofundar Spring Security em vez de copiar a configuração pronta de outro projeto.</p>
+          <div class="decision">
+            <span class="eyebrow">Decisão técnica</span>
+            <p>Cadeia de filtros própria para emissão e validação de token, com proteção de endpoints por papel e resposta padronizada quando a autenticação falha.</p>
+          </div>
+          <ul class="chips">
+            <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li>
+          </ul>
+          <a class="repo" href="https://github.com/sqlandr3/spring-auth-api" target="_blank" rel="noopener">github.com/sqlandr3/spring-auth-api</a>
+        </article>
+
+        <!-- CONFIRMAR: URL real do repositorio do WMS e se ele ja esta publico. Se ainda for local, remova este card. -->
+        <article class="card reveal">
+          <div class="card-top">
+            <h3>Warehouse Management System</h3>
+            <span class="status wip">Em desenvolvimento</span>
+          </div>
+          <p>Gestão de estoque e pedidos. É onde estou tratando o que os projetos anteriores não cobriam: separação de camadas, versionamento de banco, testes de integração e observabilidade.</p>
+          <div class="decision">
+            <span class="eyebrow">Decisão técnica</span>
+            <p>Migrations versionadas com Flyway e testes de integração em container com Testcontainers, para o teste rodar contra o mesmo banco da aplicação em vez de um banco em memória que se comporta diferente.</p>
+          </div>
+          <ul class="chips">
+            <li>Java 21</li><li>Spring Boot 3</li><li>PostgreSQL</li><li>Flyway</li><li>Docker</li><li>Testcontainers</li><li>OpenAPI</li><li>GitHub Actions</li>
+          </ul>
+          <a class="repo" href="https://github.com/sqlandr3/warehouse-management-system" target="_blank" rel="noopener">github.com/sqlandr3/warehouse-management-system</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trajetoria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Histórico versionado</p>
+        <h2>Trajetória</h2>
+        <p>Cada etapa mudou o estado anterior sem apagar o que veio antes, então está escrita como o histórico de migrations de um banco.</p>
+      </div>
+
+      <div class="migrations" id="migrations">
+        <div class="mig-track" aria-hidden="true"><span class="mig-fill" id="mig-fill"></span></div>
+
+        <div class="mig reveal">
+          <div class="mig-file">V1__suporte_e_rotina_fiscal.sql</div>
+          <div class="mig-meta">outubro de 2025 · aplicada</div>
+          <p>Entrada na Clariens. Suporte à infraestrutura, atendimento a usuários e a rotina fiscal da área: lançamento e conferência de notas, acompanhamento de pagamento e consulta de contratos.</p>
+        </div>
+
+        <div class="mig reveal">
+          <div class="mig-file">V2__automacao_de_processos.sql</div>
+          <div class="mig-meta">2026 · aplicada</div>
+          <p>Primeiras automações das rotinas que eu mesmo executava, com Copilot Studio e reestruturação dos controles da área. É o ponto em que o trabalho deixou de ser só operação e virou construção.</p>
+        </div>
+
+        <div class="mig reveal">
+          <div class="mig-file">V3__java_spring_e_faculdade.sql</div>
+          <div class="mig-meta">início de 2026 · aplicada</div>
+          <p>Início do curso de Análise e Desenvolvimento de Sistemas na UNINTER e das primeiras APIs em Java e Spring Boot, com foco em persistência, autenticação e desenho de endpoints.</p>
+        </div>
+
+        <div class="mig pending reveal">
+          <div class="mig-file">V4__arquitetura_testes_e_deploy.sql</div>
+          <div class="mig-meta">em andamento · pendente</div>
+          <p>Sair de aplicação que funciona para aplicação que se sustenta: camadas isoladas, testes de integração, migrations, pipeline de CI e métricas expostas. É o que estou construindo agora no Warehouse Management System.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Sem lista de enfeite</p>
+        <h2>Stack</h2>
+        <p>Separado por onde eu uso de verdade. Se não está aqui, eu não usei ainda.</p>
+      </div>
+
+      <div class="stack">
+        <div class="stack-group reveal">
+          <h3>Nos projetos</h3>
+          <ul>
+            <li>Java 17 / 21</li><li>Spring Boot 3</li><li>Spring Security</li><li>Spring Data JPA</li>
+            <li>Hibernate</li><li>MySQL</li><li>PostgreSQL</li><li>SQL</li><li>Flyway</li>
+            <li>Docker</li><li>Maven</li><li>Git</li><li>JUnit 5</li><li>Mockito</li>
+            <li>Testcontainers</li><li>OpenAPI</li><li>GitHub Actions</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3>No trabalho</h3>
+          <ul>
+            <li>Copilot Studio</li><li>Fluig</li><li>Protheus</li><li>Excel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Onde me encontrar</h2>
+        </div>
+        <p>O código fica no GitHub e a conversa pode começar por qualquer um destes canais. Respondo a propostas de trabalho, dúvidas sobre os projetos e conversas sobre backend e automação.</p>
+        <div class="contact-links">
+          <a href="https://github.com/sqlandr3" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/andre-masoni" target="_blank" rel="noopener">LinkedIn</a>
+          <button type="button" class="copy" id="copy-email" data-email="andremasonifraile@gmail.com">
+            <span class="copy-label">andremasonifraile@gmail.com</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 André Masoni Fraile</span>
+    <span>HTML, CSS e JavaScript na mão, sem framework</span>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<script src="main.js" defer></script>
+</body>
+</html>

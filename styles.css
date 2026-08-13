@@ -230,8 +230,14 @@ mark{background:var(--accent-vivid);color:var(--on-vivid);padding:0 .12em}
   content:"";position:absolute;left:calc((var(--mig-gutter) + 5px) * -1);top:6px;
   width:10px;height:10px;border-radius:50%;
   background:var(--paper);border:2px solid var(--accent-vivid);
+  transition:background .3s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
 }
 .mig.pending::before{border-color:var(--flag)}
+/* Lights up at the moment the scroll fill reaches this step. */
+.mig.reached::before{background:var(--accent-vivid);transform:scale(1.3);box-shadow:0 0 0 4px var(--accent-soft)}
+.mig.pending.reached::before{background:var(--flag)}
+.mig.reached .mig-file{color:var(--accent)}
+.mig-file{transition:color .3s var(--ease)}
 .mig-file{font-family:var(--mono);font-size:13.5px;word-break:break-all}
 .mig-meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:3px 0 8px}
 .mig p{font-size:14.5px;max-width:64ch;color:var(--ink-soft)}
@@ -290,6 +296,36 @@ footer .wrap{
 .to-top.visible{opacity:1;visibility:visible;transform:none}
 .to-top:hover{transform:translateY(-3px)}
 
+/* ---------- animations ---------- */
+
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* 1. Headline arrives word by word. The words are wrapped by main.js, so
+   without it the headline simply shows as normal static text. */
+.js .hero h1 .word{display:inline-block;opacity:0;animation:rise .55s var(--ease) forwards}
+
+/* 2. Accent rule sweeps across the top edge of a card on hover. */
+.card,.work-item{position:relative;overflow:hidden}
+.card::after,.work-item::after{
+  content:"";position:absolute;left:0;top:0;height:2px;width:100%;
+  background:var(--accent-vivid);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease);
+}
+.card:hover::after,.work-item:hover::after{transform:scaleX(1)}
+
+/* 3. Stack chips land one after the other once the card is revealed. */
+.js .card.shown .chips li{animation:pop .35s var(--ease) backwards}
+.js .card.shown .chips li:nth-child(1){animation-delay:.10s}
+.js .card.shown .chips li:nth-child(2){animation-delay:.16s}
+.js .card.shown .chips li:nth-child(3){animation-delay:.22s}
+.js .card.shown .chips li:nth-child(4){animation-delay:.28s}
+.js .card.shown .chips li:nth-child(5){animation-delay:.34s}
+.js .card.shown .chips li:nth-child(6){animation-delay:.40s}
+.js .card.shown .chips li:nth-child(7){animation-delay:.46s}
+.js .card.shown .chips li:nth-child(8){animation-delay:.52s}
+
 /* ---------- reveal on scroll ---------- */
 /* Hidden only when main.js is present to bring it back. Without JS the
    .js class is never added and every section stays visible. */
@@ -302,6 +338,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
+  .js .hero h1 .word,.js .card.shown .chips li{opacity:1;animation:none}
+  .card::after,.work-item::after{display:none}
+  .mig.reached::before{transform:none;box-shadow:none}
   .btn:hover,.card:hover,.work-item:hover,.contact-links a:hover,.copy:hover,.to-top:hover{transform:none}
   .theme-toggle:hover{transform:none}
   *{transition-duration:.01ms!important;animation-duration:.01ms!important}

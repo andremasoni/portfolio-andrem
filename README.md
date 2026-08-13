@@ -87,7 +87,7 @@ GitHub Pages serves the repository root. Pushing to the default branch publishes
 
 Copyright © 2026 André Masoni Fraile. All rights reserved except where stated below.
 
-**Source code** — the HTML, CSS and JavaScript in this repository — is released under the
+**Source code** the HTML, CSS and JavaScript in this repository is released under the
 [MIT License](LICENSE). Reuse it, learn from it, adapt it into your own site.
 
 **Content is not licensed.** The written text, the career history, the profile photo, the

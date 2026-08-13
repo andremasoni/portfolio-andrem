@@ -77,9 +77,8 @@
 
   <section class="hero wrap">
     <p class="eyebrow reveal">São Paulo, Brasil</p>
-    <h1 class="reveal">Eu construo o que <mark>resolve o problema</mark> que eu mesmo enfrento.</h1>
-    <p class="lede reveal">Trabalho com a rotina fiscal e administrativa de TI na Clariens: lançamento e conferência de notas, contratos, orçamento. Toda vez que uma dessas tarefas se repetia, eu parava e transformava ela em um fluxo automatizado.</p>
-    <p class="lede reveal">Foi assim que cheguei em backend. Hoje construo APIs REST em Java 21 e Spring Boot 3 pelo mesmo motivo: são sistemas que executam uma regra melhor do que uma pessoa executaria na mão, toda vez, sem cansar.</p>
+    <h1>Eu construo o que <mark>resolve o problema</mark> que eu mesmo enfrento.</h1>
+    <p class="lede reveal">Cuido da rotina fiscal de TI na Clariens e automatizo as tarefas que eu mesmo repetia todo dia. Foi por aí que cheguei em backend: hoje construo APIs REST em Java 21 e Spring Boot 3.</p>
 
     <div class="actions reveal">
       <a class="btn btn-solid" href="https://github.com/sqlandr3" target="_blank" rel="noopener">Ver o código</a>
@@ -98,35 +97,36 @@
       <div class="section-head reveal">
         <p class="eyebrow">Clariens · desde outubro de 2025</p>
         <h2>Construído no trabalho</h2>
-        <p>Rotinas que eu executava na mão e passei a resolver com fluxo automatizado, dentro das ferramentas que a empresa já usa.</p>
+        <p>Rotinas que eu executava na mão e passei a resolver com automação.</p>
       </div>
 
       <div class="work">
         <article class="work-item reveal">
-          <h3>Consulta de fornecedor e contrato</h3>
+          <h3>Agente de consulta de fornecedores</h3>
           <dl class="ba">
-            <div><dt>Antes</dt><dd>Procurar fornecedor, contrato e condição em planilhas e pastas espalhadas, uma consulta por vez.</dd></div>
-            <div class="now"><dt>Agora</dt><dd>Fluxo que responde a consulta direto, sem abrir a planilha.</dd></div>
+            <div><dt>Antes</dt><dd>Caçar fornecedor, contrato e condição de pagamento em planilhas espalhadas, uma consulta por vez.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Agente que construí no Copilot Studio responde em linguagem natural, sem ninguém abrir a planilha.</dd></div>
           </dl>
           <p class="tool">Copilot Studio</p>
         </article>
 
         <article class="work-item reveal">
-          <h3>Conferência de nota fiscal</h3>
+          <h3>Organizador de notas em Python</h3>
           <dl class="ba">
-            <div><dt>Antes</dt><dd>Conferir fornecedor, valores, datas de emissão e vencimento e condição de pagamento manualmente. A divergência só aparecia depois do lançamento.</dd></div>
-            <div class="now"><dt>Agora</dt><dd>Validação antes de a nota entrar no sistema, o que evita o retrabalho de corrigir depois.</dd></div>
+            <div><dt>Antes</dt><dd>PDFs chegavam com nome qualquer na pasta, e cada nota lançada era transcrita à mão para a planilha.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Software em Python que lê os PDFs, renomeia cada arquivo pelos dados da própria nota e alimenta a planilha com as notas lançadas.</dd></div>
           </dl>
-          <p class="tool">Agente de validação · Fluig</p>
+          <!-- CONFIRMAR: trocar pelas bibliotecas que voce realmente usou (leitura de PDF e escrita na planilha). -->
+          <p class="tool">Python · leitura de PDF</p>
         </article>
 
         <article class="work-item reveal">
-          <h3>Controle orçamentário 2026</h3>
+          <h3>Conferência antes do lançamento</h3>
           <dl class="ba">
-            <div><dt>Antes</dt><dd>Contratos, notas, rateio e orçamento em controles separados, sem visão única.</dd></div>
-            <div class="now"><dt>Agora</dt><dd>Base unificada com Opex, Capex, rateio por centro de custo e notas ligadas ao contrato de origem.</dd></div>
+            <div><dt>Antes</dt><dd>Duplicidade, valor fora do contrato ou vigência vencida só apareciam depois da nota já lançada.</dd></div>
+            <div class="now"><dt>Agora</dt><dd>Conferência que cruza a nota com o contrato e separa o resultado em impedimento, confirmação e alerta. A decisão continua com a pessoa.</dd></div>
           </dl>
-          <p class="tool">Planilha estruturada · dados do Protheus</p>
+          <p class="tool">Agente de validação · dados de contrato</p>
         </article>
       </div>
     </div>
@@ -137,7 +137,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Código aberto no GitHub</p>
         <h2>Construído em código</h2>
-        <p>Cada repositório existe para resolver ou aprender uma coisa específica. O código está aberto para conferência.</p>
+        <p>Cada repositório resolve ou estuda uma coisa específica. Código aberto para conferência.</p>
       </div>
 
       <div class="projects">
@@ -147,10 +147,10 @@
             <h3>Order Management API</h3>
             <span class="status">Concluído</span>
           </div>
-          <p>API REST de gestão de pedidos: cadastro de produtos e clientes, criação de pedido com múltiplos itens e cálculo de totais.</p>
+          <p>API REST de pedidos: produtos, clientes, pedido com múltiplos itens e cálculo de totais.</p>
           <div class="decision">
             <span class="eyebrow">Decisão técnica</span>
-            <p>Autenticação stateless com JWT e refresh token, para o access token expirar rápido sem obrigar o usuário a fazer login de novo a cada expiração.</p>
+            <p>JWT com refresh token, para o access token expirar rápido sem forçar login a cada expiração.</p>
           </div>
           <ul class="chips">
             <li>Java 21</li><li>Spring Boot 3</li><li>JPA / Hibernate</li><li>MySQL</li><li>JWT</li>
@@ -163,10 +163,10 @@
             <h3>Spring Auth API</h3>
             <span class="status">Concluído</span>
           </div>
-          <p>Serviço de autenticação e autorização isolado, construído para aprofundar Spring Security em vez de copiar a configuração pronta de outro projeto.</p>
+          <p>Serviço de autenticação isolado, feito para aprofundar Spring Security em vez de copiar configuração pronta.</p>
           <div class="decision">
             <span class="eyebrow">Decisão técnica</span>
-            <p>Cadeia de filtros própria para emissão e validação de token, com proteção de endpoints por papel e resposta padronizada quando a autenticação falha.</p>
+            <p>Cadeia de filtros própria, proteção de endpoints por papel e resposta padronizada quando a autenticação falha.</p>
           </div>
           <ul class="chips">
             <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li>
@@ -180,10 +180,10 @@
             <h3>Warehouse Management System</h3>
             <span class="status wip">Em desenvolvimento</span>
           </div>
-          <p>Gestão de estoque e pedidos. É onde estou tratando o que os projetos anteriores não cobriam: separação de camadas, versionamento de banco, testes de integração e observabilidade.</p>
+          <p>Gestão de estoque e pedidos. É onde trato o que os anteriores não cobriam: camadas isoladas, versionamento de banco, testes de integração e observabilidade.</p>
           <div class="decision">
             <span class="eyebrow">Decisão técnica</span>
-            <p>Migrations versionadas com Flyway e testes de integração em container com Testcontainers, para o teste rodar contra o mesmo banco da aplicação em vez de um banco em memória que se comporta diferente.</p>
+            <p>Testes de integração em container, para rodar contra o mesmo banco da aplicação em vez de um banco em memória que se comporta diferente.</p>
           </div>
           <ul class="chips">
             <li>Java 21</li><li>Spring Boot 3</li><li>PostgreSQL</li><li>Flyway</li><li>Docker</li><li>Testcontainers</li><li>OpenAPI</li><li>GitHub Actions</li>
@@ -200,7 +200,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Histórico versionado</p>
         <h2>Trajetória</h2>
-        <p>Cada etapa mudou o estado anterior sem apagar o que veio antes, então está escrita como o histórico de migrations de um banco.</p>
+        <p>Cada etapa mudou o estado anterior sem apagar o que veio antes, como o histórico de migrations de um banco.</p>
       </div>
 
       <div class="migrations" id="migrations">
@@ -209,25 +209,25 @@
         <div class="mig reveal">
           <div class="mig-file">V1__suporte_e_rotina_fiscal.sql</div>
           <div class="mig-meta">outubro de 2025 · aplicada</div>
-          <p>Entrada na Clariens. Suporte à infraestrutura, atendimento a usuários e a rotina fiscal da área: lançamento e conferência de notas, acompanhamento de pagamento e consulta de contratos.</p>
+          <p>Entrada na Clariens: suporte à infraestrutura, atendimento a usuários e a rotina fiscal da área.</p>
         </div>
 
         <div class="mig reveal">
           <div class="mig-file">V2__automacao_de_processos.sql</div>
           <div class="mig-meta">2026 · aplicada</div>
-          <p>Primeiras automações das rotinas que eu mesmo executava, com Copilot Studio e reestruturação dos controles da área. É o ponto em que o trabalho deixou de ser só operação e virou construção.</p>
+          <p>Primeiras automações das rotinas que eu mesmo executava. É onde o trabalho deixou de ser operação e virou construção.</p>
         </div>
 
         <div class="mig reveal">
           <div class="mig-file">V3__java_spring_e_faculdade.sql</div>
           <div class="mig-meta">início de 2026 · aplicada</div>
-          <p>Início do curso de Análise e Desenvolvimento de Sistemas na UNINTER e das primeiras APIs em Java e Spring Boot, com foco em persistência, autenticação e desenho de endpoints.</p>
+          <p>Início do curso de ADS na UNINTER e das primeiras APIs em Java e Spring Boot.</p>
         </div>
 
         <div class="mig pending reveal">
           <div class="mig-file">V4__arquitetura_testes_e_deploy.sql</div>
           <div class="mig-meta">em andamento · pendente</div>
-          <p>Sair de aplicação que funciona para aplicação que se sustenta: camadas isoladas, testes de integração, migrations, pipeline de CI e métricas expostas. É o que estou construindo agora no Warehouse Management System.</p>
+          <p>Sair de aplicação que funciona para aplicação que se sustenta: testes, migrations, CI e métricas expostas.</p>
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Sem lista de enfeite</p>
         <h2>Stack</h2>
-        <p>Separado por onde eu uso de verdade. Se não está aqui, eu não usei ainda.</p>
+        <p>Separado por onde uso de verdade. Se não está aqui, eu não usei ainda.</p>
       </div>
 
       <div class="stack">
@@ -254,7 +254,7 @@
         <div class="stack-group reveal">
           <h3>No trabalho</h3>
           <ul>
-            <li>Copilot Studio</li><li>Fluig</li><li>Protheus</li><li>Excel</li>
+            <li>Python</li><li>Copilot Studio</li><li>Fluig</li><li>Protheus</li><li>Excel</li>
           </ul>
         </div>
       </div>
@@ -268,7 +268,7 @@
           <p class="eyebrow">Contato</p>
           <h2>Onde me encontrar</h2>
         </div>
-        <p>O código fica no GitHub e a conversa pode começar por qualquer um destes canais. Respondo a propostas de trabalho, dúvidas sobre os projetos e conversas sobre backend e automação.</p>
+        <p>O código fica no GitHub. A conversa pode começar por qualquer um destes canais.</p>
         <div class="contact-links">
           <a href="https://github.com/sqlandr3" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/andre-masoni" target="_blank" rel="noopener">LinkedIn</a>

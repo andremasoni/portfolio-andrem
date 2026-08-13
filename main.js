@@ -33,6 +33,40 @@
     });
   }
 
+  /* ---------- headline split ---------- */
+
+  const headline = document.querySelector(".hero h1");
+  const WORD_STEP_MS = 55;
+
+  if (headline && !prefersReducedMotion) {
+    const pieces = [];
+
+    // Text nodes are split per word; elements such as <mark> stay whole so the
+    // highlight is not chopped into fragments.
+    headline.childNodes.forEach(function (node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent.split(/(\s+)/).forEach(function (chunk) {
+          if (!chunk.trim()) {
+            pieces.push(document.createTextNode(chunk));
+            return;
+          }
+          const word = document.createElement("span");
+          word.className = "word";
+          word.textContent = chunk;
+          pieces.push(word);
+        });
+      } else {
+        node.classList.add("word");
+        pieces.push(node);
+      }
+    });
+
+    headline.replaceChildren.apply(headline, pieces);
+    headline.querySelectorAll(".word").forEach(function (word, index) {
+      word.style.animationDelay = index * WORD_STEP_MS + "ms";
+    });
+  }
+
   /* ---------- reveal on scroll ---------- */
 
   const revealables = document.querySelectorAll(".reveal");
@@ -86,6 +120,7 @@
   const timeline = document.getElementById("migrations");
   const timelineFill = document.getElementById("mig-fill");
   const backToTop = document.getElementById("to-top");
+  const timelineSteps = timeline ? Array.from(timeline.querySelectorAll(".mig")) : [];
   const BACK_TO_TOP_OFFSET = 700;
   const TIMELINE_TRIGGER = 0.55; // share of the viewport height used as the read line
 
@@ -110,6 +145,12 @@
     const scrollY = window.scrollY;
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const timelineBox = timeline ? timeline.getBoundingClientRect() : null;
+    const timelineProgressPx = timelineBox
+      ? clamp(window.innerHeight * TIMELINE_TRIGGER - timelineBox.top, 0, timelineBox.height)
+      : 0;
+    const stepOffsets = timelineBox
+      ? timelineSteps.map(function (step) { return step.offsetTop; })
+      : [];
 
     // Write phase.
     if (progressBar) {
@@ -121,6 +162,10 @@
       const travelled = window.innerHeight * TIMELINE_TRIGGER - timelineBox.top;
       timelineFill.style.transform = "scaleY(" + clamp(travelled / timelineBox.height, 0, 1) + ")";
     }
+
+    timelineSteps.forEach(function (step, index) {
+      step.classList.toggle("reached", timelineProgressPx >= stepOffsets[index]);
+    });
 
     if (backToTop) {
       backToTop.classList.toggle("visible", scrollY > BACK_TO_TOP_OFFSET);

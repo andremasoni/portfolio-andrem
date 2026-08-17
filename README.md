@@ -2,7 +2,7 @@
 
 Personal portfolio of **André Masoni Fraile**, backend Java developer in São Paulo, Brazil.
 
-**Live:** [[https://sqlandr3.github.io/portfolio-andrem/](https://andremasoni.github.io/portfolio-andrem)
+**Live:** [[https://sqlandr3.github.io/portfolio-andrem/]
 ](https://andremasoni.github.io/portfolio-andrem/)
 A static single-page site with no framework, no build step and no dependencies.
 Everything is hand written: three files, roughly 25 KB of source.

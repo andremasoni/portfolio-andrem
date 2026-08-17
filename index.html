@@ -31,12 +31,9 @@
 <link rel="stylesheet" href="styles.css">
 
 <script>
-  // Applied before first paint to avoid a flash of the wrong theme.
   (function () {
     var root = document.documentElement;
 
-    // Content is visible by default. This class hands control of the reveal
-    // animation to main.js, so a blocked or failed script leaves a readable page.
     root.classList.add("js");
 
     var stored = null;
@@ -116,8 +113,7 @@
             <div><dt>Antes</dt><dd>PDFs chegavam com nome qualquer na pasta, e cada nota lançada era transcrita à mão para a planilha.</dd></div>
             <div class="now"><dt>Agora</dt><dd>Software em Python que lê os PDFs, renomeia cada arquivo pelos dados da própria nota e alimenta a planilha com as notas lançadas.</dd></div>
           </dl>
-          <!-- CONFIRMAR: trocar pelas bibliotecas que voce realmente usou (leitura de PDF e escrita na planilha). -->
-          <p class="tool">Python · leitura de PDF</p>
+          <p class="tool">Python, lumberpdf & watchdog · leitura de PDF</p>
         </article>
 
         <article class="work-item reveal">
@@ -173,26 +169,7 @@
           </ul>
           <a class="repo" href="https://github.com/sqlandr3/spring-auth-api" target="_blank" rel="noopener">github.com/sqlandr3/spring-auth-api</a>
         </article>
-
-        <!-- CONFIRMAR: URL real do repositorio do WMS e se ele ja esta publico. Se ainda for local, remova este card. -->
-        <article class="card reveal">
-          <div class="card-top">
-            <h3>Warehouse Management System</h3>
-            <span class="status wip">Em desenvolvimento</span>
-          </div>
-          <p>Gestão de estoque e pedidos. É onde trato o que os anteriores não cobriam: camadas isoladas, versionamento de banco, testes de integração e observabilidade.</p>
-          <div class="decision">
-            <span class="eyebrow">Decisão técnica</span>
-            <p>Testes de integração em container, para rodar contra o mesmo banco da aplicação em vez de um banco em memória que se comporta diferente.</p>
-          </div>
-          <ul class="chips">
-            <li>Java 21</li><li>Spring Boot 3</li><li>PostgreSQL</li><li>Flyway</li><li>Docker</li><li>Testcontainers</li><li>OpenAPI</li><li>GitHub Actions</li>
-          </ul>
-          <a class="repo" href="https://github.com/sqlandr3/warehouse-management-system" target="_blank" rel="noopener">github.com/sqlandr3/warehouse-management-system</a>
-        </article>
-
-      </div>
-    </div>
+             </div>
   </section>
 
   <section class="section" id="trajetoria">

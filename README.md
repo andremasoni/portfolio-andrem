@@ -1,105 +1,86 @@
-# portfolio-andrem-2026
+# André Masoni — Portfolio
 
-Personal portfolio of **André Masoni Fraile**, backend Java developer in São Paulo, Brazil.
+Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos, conhecimentos e experiência na área de tecnologia.
 
-**Live:** [[https://sqlandr3.github.io/portfolio-andrem/]
-](https://andremasoni.github.io/portfolio-andrem/)
-A static single-page site with no framework, no build step and no dependencies.
-Everything is hand written: three files, roughly 25 KB of source.
+[![Portfolio](https://img.shields.io/badge/Portfolio-Online-5CE65C?style=for-the-badge&logo=githubpages&logoColor=black)](https://andremasoni.github.io/portfolio-andrem/)
 
----
+## Sobre o projeto
 
-## Why it is built this way
+Este projeto foi desenvolvido utilizando tecnologias web nativas, sem frameworks ou dependências externas de JavaScript.
 
-A portfolio that takes thirty seconds to boot a JavaScript bundle contradicts what it
-claims about its author. The constraints below came first, and the design followed:
+O objetivo é manter um portfólio simples, rápido e responsivo para apresentar meus projetos, experiências e evolução como desenvolvedor.
 
-- **Content lives in the HTML.** Nothing is injected at runtime, so link previews,
-  search engines and screen readers all receive the full page.
-- **JavaScript is optional.** Scroll reveals are scoped to a `js` class that the page
-  sets before the first paint. A blocked or failed script leaves the site readable
-  instead of blank.
-- **Nothing animates layout.** The reading progress bar and the timeline fill use
-  `transform`, so scrolling stays on the compositor rather than triggering reflow.
-- **Motion is a preference, not a default.** `prefers-reduced-motion` disables every
-  animation, including the ones triggered on load.
+## Tecnologias
 
-## Features
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
-| Feature | Notes |
-|---|---|
-| Light and dark themes | Follows the OS preference on first visit, then remembers the choice |
-| Reading progress bar | Scroll position mapped to a compositor-friendly `scaleX` |
-| Scrollspy navigation | Highlights the section currently being read |
-| Staggered reveals | Entries sorted by vertical position so the cascade reads top to bottom |
-| Animated timeline | Career steps light up as the scroll fill reaches each one |
-| Copy e-mail | Falls back to the mail client when the Clipboard API is unavailable |
+## Funcionalidades
 
-## Project structure
+- Tema claro e escuro
+- Layout responsivo
+- Navegação com Scrollspy
+- Barra de progresso de leitura
+- Animações durante o scroll
+- Timeline da trajetória profissional
+- Botão para copiar e-mail
+- Suporte a `prefers-reduced-motion`
 
-```
-.
-├── index.html            # Content and structure
-├── styles.css            # Design tokens, layout, animations
-├── main.js               # Progressive enhancement
-├── favicon.svg           # Icon source
-├── favicon.ico           # Fallback icon, 16/32/48 px frames
-├── apple-touch-icon.png  # 180 px, square: iOS applies its own mask
+## Estrutura do projeto
+
+```text
+portfolio-andrem/
+├── index.html
+├── styles.css
+├── main.js
+├── favicon.svg
+├── favicon.ico
 ├── icon-192.png
 ├── icon-512.png
-├── site.webmanifest      # Android home screen metadata
-├── andremasoni.jpg       # Profile photo, also the Open Graph preview
-└── LICENSE
+├── site.webmanifest
+└── README.md
 ```
 
-## Design system
+## Executando localmente
 
-**Type.** Bricolage Grotesque for display, Public Sans for body copy, JetBrains Mono
-for labels and data.
-
-**Colour.** The accent is `#5CE65C`. It measures roughly 1.6:1 against white, well below
-the 4.5:1 minimum for text, so in the light theme it is restricted to fills with dark
-text on top, and text and links use `#117411`, the same hue darkened to about 6:1.
-The dark theme uses the accent directly, where it reaches roughly 12.9:1.
-
-**Icon.** The `A` crossbar is drawn as a rule that overshoots both legs, echoing the
-migration timeline used in the trajectory section.
-
-## Running locally
+Clone o repositório:
 
 ```bash
-git clone https://github.com/sqlandr3/portfolio-andrem.git
-cd portfolio-andrem
-python3 -m http.server 8000
+git clone https://github.com/andremasoni/portfolio-andrem.git
 ```
 
-Then open http://localhost:8000
+Entre no diretório:
 
-Opening `index.html` directly from the file system also works, except that
-`site.webmanifest` is blocked under the `file://` protocol. That warning is harmless
-and does not affect the layout.
+```bash
+cd portfolio-andrem
+```
+
+Execute um servidor local:
+
+```bash
+python -m http.server 8000
+```
+
+Depois acesse:
+
+```text
+http://localhost:8000
+```
 
 ## Deploy
 
-GitHub Pages serves the repository root. Pushing to the default branch publishes the site.
+O projeto está publicado através do **GitHub Pages**.
 
-## Licence and copyright
+[![Acessar Portfolio](https://img.shields.io/badge/Acessar%20Portfolio-GitHub%20Pages-5CE65C?style=for-the-badge&logo=githubpages&logoColor=black)](https://andremasoni.github.io/portfolio-andrem/)
 
-Copyright © 2026 André Masoni Fraile. All rights reserved except where stated below.
+## Autor
 
-**Source code** the HTML, CSS and JavaScript in this repository is released under the
-[MIT License](LICENSE). Reuse it, learn from it, adapt it into your own site.
+**André Masoni**
 
-**Content is not licensed.** The written text, the career history, the profile photo, the
-name and the personal branding remain fully reserved. Cloning this repository does not
-grant permission to republish that material, with or without attribution. If you want to
-build on the layout, keep the structure and replace the content with your own.
+Desenvolvedor Backend com foco em Java, Spring Boot, APIs REST e Docker.
 
-## Credits
-
-Typefaces are served by Google Fonts and licensed under the
-[SIL Open Font License 1.1](https://openfontlicense.org/):
-[Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque),
-[Public Sans](https://fonts.google.com/specimen/Public+Sans) and
-[JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono).
-Icons are hand drawn SVG. No other third-party assets are used.
+[![GitHub](https://img.shields.io/badge/GitHub-andremasoni-181717?style=for-the-badge&logo=github)](https://github.com/andremasoni)
+[![Portfolio](https://img.shields.io/badge/Portfolio-André%20Masoni-5CE65C?style=for-the-badge&logo=googlechrome&logoColor=black)](https://andremasoni.github.io/portfolio-andrem/)

@@ -1,4 +1,4 @@
-# André Masoni — Portfolio
+# André Masoni - Portfolio
 
 Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos, conhecimentos e experiência na área de tecnologia.
 
@@ -43,34 +43,6 @@ portfolio-andrem/
 ├── site.webmanifest
 └── README.md
 ```
-
-## Executando localmente
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/andremasoni/portfolio-andrem.git
-```
-
-Entre no diretório:
-
-```bash
-cd portfolio-andrem
-```
-
-Execute um servidor local:
-
-```bash
-python -m http.server 8000
-```
-
-Depois acesse:
-
-```text
-http://localhost:8000
-```
-
-## Deploy
 
 O projeto está publicado através do **GitHub Pages**.
 

@@ -1,4 +1,4 @@
-# André Masoni - Portfolio
+# André - Portfolio
 
 Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos, conhecimentos e experiência na área de tecnologia.
 
